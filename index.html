@@ -68,20 +68,17 @@
 }
 </style>
 <body>
-    <div>
         <div> 
             <header class="header">
                 <h1>Welcome To My Portofolio</h1>
             </header>
         </div>
-        <div>
             <nav>
                 <a href="/"> List </a>
                 <a href="/"> Form </a>
                 <a href="/"> Home </a>
             </nav>
         </div>
-    </div>
      <!-- ganti src/url gambar lokal  -->
     <img src="Marsha.jpg" alt="Foto Saya" width="150" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%;">
     <h2>
@@ -135,22 +132,70 @@
 <body>
 
   <h2>Skill</h2>
+  <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+  .skill-container {
+    list-style: none;
+    padding: 0;
+    max-width: 300px;
+    font-family: sans-serif;
+  }
+
+  .skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .skill-icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    font-size: 20px;
+  }
+
+  /* Warna Ikon yang disesuaikan */
+  .html-color { color: #E34F26; }    /* Oranye HTML5 */
+  .js-color { color: #F7DF1E; }      /* Kuning JavaScript (pake background gelap/kontras lebih bagus) */
+  .python-color { color: #3776AB; }  /* Biru Python */
+  .corel-color { color: #00A651; }   /* Hijau CorelDRAW */
+
+</style>
+</head>
+<body>
+
   <ul class="skill-container">
     <li class="skill-item">
-      <div class="skill-icon html-icon"><i class="fab fa-html5"></i></div>
+      <div class="skill-icon html-color"><i class="fab fa-html5"></i></div>
       HTML
     </li>
-     <li class="skill-item">
-      <div class="skill-icon html-icon"><i class="fab fa-html5"></i></div>
+
+    <li class="skill-item">
+      <div class="skill-icon js-color"><i class="fab fa-js-square"></i></div>
       JavaScript
-    <li class="skill-item">
-      <div class="skill-icon python-icon"><i class="fas fa-project-diagram"></i></div>
-      Phyton
     </li>
+
     <li class="skill-item">
-      <div class="skill-icon js-icon"><i class="fas fa-user-graduate"></i></div>
-      Corel DRAW
+      <div class="skill-icon python-color"><i class="fab fa-python"></i></div>
+      Python
     </li>
+
+    <li class="skill-item">
+      <div class="skill-icon corel-color"><i class="fas fa-pen-nib"></i></div>
+      CorelDRAW
+    </li>
+  </ul>
+
+</body>
+</html>
   </ul>
 
 </body>
