@@ -114,20 +114,31 @@
 <br>
 <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f0f0f0;">
 
-  <div style="width: fit-content; background-color: #ffffff; padding: 12px; border-radius: 8px; font-family: sans-serif; border: 1px solid #ddd; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  <div style="width: fit-content; background-color: #ffffff; padding: 20px; border-radius: 12px; font-family: sans-serif; color: #000000; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #ddd;">
     
-    <h2 style="margin: 0 0 10px 0; font-size: 14px; color: #000; text-align: center;">Hubungi Saya</h2>
+    <h2 style="margin: 0 0 4px 0; font-size: 16px; text-align: center;">Hubungi Saya</h2>
+    <p style="margin: 0 0 15px 0; font-size: 10px; color: #666; text-align: center;">Kirim pesan langsung kepada saya</p>
 
-    <form action="/submit" method="post" style="display: flex; flex-direction: column; gap: 8px;">
+    <form action="/submit" method="post" style="display: flex; flex-direction: column; gap: 10px; width: 200px;">
       
-      <input type="text" placeholder="Nama" style="width: 160px; box-sizing: border-box; background: #fff; border: 1px solid #ccc; border-radius: 4px; padding: 6px; color: #000; font-size: 11px; outline: none;">
+      <div>
+        <label style="display: block; font-size: 11px; color: #000; margin-bottom: 5px; font-weight: bold;">Nama</label>
+        <input type="text" placeholder="Nama lengkap" style="width: 100%; box-sizing: border-box; background: #fff; border: 1px solid #000; border-radius: 6px; padding: 8px; color: #000; font-size: 12px; outline: none;">
+      </div>
 
-      <input type="email" placeholder="Email" style="width: 160px; box-sizing: border-box; background: #fff; border: 1px solid #ccc; border-radius: 4px; padding: 6px; color: #000; font-size: 11px; outline: none;">
+      <div>
+        <label style="display: block; font-size: 11px; color: #000; margin-bottom: 5px; font-weight: bold;">Email</label>
+        <input type="email" placeholder="email@contoh.com" style="width: 100%; box-sizing: border-box; background: #fff; border: 1px solid #000; border-radius: 6px; padding: 8px; color: #000; font-size: 12px; outline: none;">
+      </div>
 
-      <textarea placeholder="Pesan" rows="2" style="width: 160px; box-sizing: border-box; background: #fff; border: 1px solid #ccc; border-radius: 4px; padding: 6px; color: #000; font-size: 11px; outline: none; resize: none;"></textarea>
+      <div>
+        <label style="display: block; font-size: 11px; color: #000; margin-bottom: 5px; font-weight: bold;">Pesan</label>
+        <textarea placeholder="Tulis pesan Anda..." rows="2" style="width: 100%; box-sizing: border-box; background: #fff; border: 1px solid #000; border-radius: 6px; padding: 8px; color: #000; font-size: 12px; outline: none; resize: none;"></textarea>
+      </div>
 
-      <button type="submit" style="background-color: #000; color: #fff; border: none; border-radius: 4px; padding: 8px; font-weight: bold; font-size: 10px; cursor: pointer; text-transform: uppercase;">
-        Kirim
+      <button type="submit" style="margin-top: 5px; background-color: #000000; color: #ffffff; border: none; border-radius: 6px; padding: 10px; font-weight: bold; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        KIRIM
       </button>
 
     </form>
