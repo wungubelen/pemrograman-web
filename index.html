@@ -145,10 +145,90 @@
     
     <h2>porject</h2>
     <ul>
-        <li>Website Toko Online Sederhana</li>
-        <li>Program Manajemen Data (Siswa, Mahasiswa) </li>
-        <li>Design Poster/Banner</li>
-    </ul>
+      <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+  .project-section {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+  }
+
+  .project-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+  }
+
+  /* Gaya Kartu Proyek */
+  .project-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    width: 180px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  .project-icon {
+    font-size: 24px;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .project-title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.4;
+  }
+
+  /* Warna Ikon */
+  .web-color { color: #3182ce; }    /* Biru */
+  .data-color { color: #38a169; }   /* Hijau */
+  .design-color { color: #e53e3e; } /* Merah */
+
+</style>
+</head>
+<body>
+
+<div class="project-section">
+  <h2 style="text-align: center; font-size: 20px; margin-bottom: 30px;">Featured Projects</h2>
+  
+  <ul class="project-container">
+    
+    <li class="project-card">
+      <i class="fas fa-shopping-cart project-icon web-color"></i>
+      <span class="project-title">Website Toko Online Sederhana</span>
+    </li>
+
+    <li class="project-card">
+      <i class="fas fa-database project-icon data-color"></i>
+      <span class="project-title">Program Manajemen Data</span>
+    </li>
+
+    <li class="project-card">
+      <i class="fas fa-paint-brush project-icon design-color"></i>
+      <span class="project-title">Design Poster & Banner</span>
+    </li>
+
+  </ul>
+</div>
+
+</body>
+</html>
     
     <!-- ganti src/url gambar lokal -->
    <div style="display: flex; flex-direction: row; gap: 40px; justify-content: center; flex-wrap: wrap; padding: 40px; background-color: transparent;">
