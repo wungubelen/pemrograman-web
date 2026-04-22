@@ -23,10 +23,11 @@
     background: rgba(0, 0, 0, 0.25); 
     z-index: -1;
   }
-  .contact-form {
-  max-width: 300px; /* kecil & rapi */
+  <style>
+.contact-form {
+  max-width: 250px; /* ukuran kotak diperkecil */
   margin: 20px auto;
-  padding: 15px;
+  padding: 12px;
   background: rgba(255,255,255,0.9);
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
@@ -36,36 +37,37 @@
 
 .contact-form label {
   margin-top: 8px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .contact-form input,
 .contact-form textarea {
   margin-top: 4px;
-  padding: 8px;
+  padding: 6px;
+  font-size: 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
-  font-size: 13px;
 }
 
 .contact-form textarea {
-  resize: none; /* tidak bisa diperbesar manual */
+  resize: none; /* tidak bisa diperbesar */
 }
 
 .contact-form button {
-  margin-top: 12px;
-  padding: 8px;
+  margin-top: 10px;
+  padding: 6px;
+  font-size: 13px;
   border: none;
   border-radius: 6px;
   background: #333;
   color: white;
-  font-size: 14px;
   cursor: pointer;
 }
 
 .contact-form button:hover {
   background: #555;
 }
+</style>
 </style>
 
 <body>
