@@ -113,18 +113,26 @@
 
 <br>
 
-<form class="contact-form" action="/submit" method="post" style="max-width: 160px; margin: 10px auto; padding: 12px; background: rgba(255,255,255,0.9); border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.2); font-family: sans-serif; font-size: 13px;">
+<<form class="contact-form" action="/submit" method="post" style="display: flex; gap: 10px; align-items: flex-end; background: rgba(255,255,255,0.9); padding: 12px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); font-family: sans-serif; font-size: 12px; width: fit-content;">
   
-  <label for="name" style="display: block; margin-bottom: 4px;">Name</label>
-  <input type="text" id="name" name="name" required style="width: 100%; box-sizing: border-box; margin-bottom: 10px; padding: 6px; border: 1px solid #ccc; border-radius: 4px;">
+  <div style="display: flex; flex-direction: column;">
+    <label for="name" style="margin-bottom: 4px;">Name</label>
+    <input type="text" id="name" name="name" required style="padding: 6px; border: 1px solid #ccc; border-radius: 4px; width: 100px;">
+  </div>
 
-  <label for="email" style="display: block; margin-bottom: 4px;">Email</label>
-  <input type="email" id="email" name="email" required style="width: 100%; box-sizing: border-box; margin-bottom: 10px; padding: 6px; border: 1px solid #ccc; border-radius: 4px;">
+  <div style="display: flex; flex-direction: column;">
+    <label for="email" style="margin-bottom: 4px;">Email</label>
+    <input type="email" id="email" name="email" required style="padding: 6px; border: 1px solid #ccc; border-radius: 4px; width: 130px;">
+  </div>
 
-  <label for="message" style="display: block; margin-bottom: 4px;">Message</label>
-  <textarea id="message" name="message" rows="2" required style="width: 100%; box-sizing: border-box; margin-bottom: 12px; padding: 6px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+  <div style="display: flex; flex-direction: column;">
+    <label for="message" style="margin-bottom: 4px;">Message</label>
+    <textarea id="message" name="message" rows="1" required style="padding: 6px; border: 1px solid #ccc; border-radius: 4px; width: 150px; resize: none;"></textarea>
+  </div>
 
-  <button type="submit" style="width: 100%; padding: 8px; background-color: #333; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Submit</button>
+  <button type="submit" style="padding: 7px 15px; background-color: #333; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; height: 30px;">Submit</button>
+  
+</form>
   
 </form>
 </body>
