@@ -23,11 +23,10 @@
     background: rgba(0, 0, 0, 0.25); 
     z-index: -1;
   }
-  <style>
-.contact-form {
-  max-width: 250px; /* ukuran kotak diperkecil */
+  .contact-form {
+  max-width: 300px; /* kecil & rapi */
   margin: 20px auto;
-  padding: 12px;
+  padding: 15px;
   background: rgba(255,255,255,0.9);
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
@@ -37,30 +36,30 @@
 
 .contact-form label {
   margin-top: 8px;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .contact-form input,
 .contact-form textarea {
   margin-top: 4px;
-  padding: 6px;
-  font-size: 12px;
+  padding: 8px;
   border-radius: 6px;
   border: 1px solid #ccc;
+  font-size: 13px;
 }
 
 .contact-form textarea {
-  resize: none; /* tidak bisa diperbesar */
+  resize: none; /* tidak bisa diperbesar manual */
 }
 
 .contact-form button {
-  margin-top: 10px;
-  padding: 6px;
-  font-size: 13px;
+  margin-top: 12px;
+  padding: 8px;
   border: none;
   border-radius: 6px;
   background: #333;
   color: white;
+  font-size: 14px;
   cursor: pointer;
 }
 
@@ -68,8 +67,6 @@
   background: #555;
 }
 </style>
-</style>
-
 <body>
     <div>
         <div> 
@@ -117,7 +114,7 @@
 <br>
 
 <form class="contact-form" action="/submit" method="post">
-  
+   <form style="max-width: 250px; margin: 20px auto; padding: 12px; background: rgba(255,255,255,0.9); border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.2);">
   <label for="name">Name</label>
   <input type="text" id="name" name="name" required>
 
