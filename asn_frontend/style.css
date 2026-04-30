@@ -7,12 +7,12 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: #f5f7f6;
+    background: #97baac;
     color: #333;
 }
 
 header {
-    background: #edf1f0;
+    background: #9b9d9d;
     color: white;
     padding: 15px 40px;
     display: flex;
@@ -72,13 +72,13 @@ nav a:hover {
     background: #f39c12;
 }
 
-/* SECTION UMUM */
+/*INI UNTUK SECTION UMUM */
 section {
     padding: 60px 40px;
     text-align: center;
 }
 
-/* LAYANAN */
+/* INI UNTUK LAYANAN */
 .card-container {
     display: flex;
     justify-content: center;
@@ -100,12 +100,12 @@ section {
     transform: translateY(-8px);
 }
 
-/* TENTANG */
+/* INI  TENTANG KAMI */
 #tentang {
-    background: #eafaf1;
+    background: #c8c9c8;
 }
 
-/* KONTAK */
+/* INI UNTUK KONTAK */
 #kontak {
     background: #ffffff;
 }
