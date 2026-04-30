@@ -1,0 +1,138 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7f6;
+    color: #333;
+}
+
+header {
+    background: #edf1f0;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    font-size: 1.5em;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #f1c40f;
+}
+
+#hero {
+    height: 80vh;
+    background: linear-gradient(rgba(15,76,58,0.7), rgba(15,76,58,0.7)),
+    url("https://i.pinimg.com/736x/f5/48/c2/f548c28156007662f2b64a8037f1a720.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#hero h1 {
+    font-size: 3em;
+}
+
+#hero p {
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
+#hero button {
+    padding: 12px 25px;
+    background: #f1c40f;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#hero button:hover {
+    background: #f39c12;
+}
+
+/* SECTION UMUM */
+section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+/* LAYANAN */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    width: 220px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* TENTANG */
+#tentang {
+    background: #eafaf1;
+}
+
+/* KONTAK */
+#kontak {
+    background: #ffffff;
+}
+
+#kontak p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+footer {
+    background: #0f4c3a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
