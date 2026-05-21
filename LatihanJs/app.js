@@ -1,19 +1,20 @@
-import student from "./models/Student.js";
-import BankAccount from "./models/BankAccount.js";
+import Student from './models/Student.js';
+import BankAccount from './models/BankAccount.js';
 
-const mhs = new Student("Budi", 21, "123456", "Informatika");
-mhs.greet();
-mhs.study();  
+const mhs1 = new Student("Budi", 21, "221116001", "Informatika");
+mhs1.greet();
+mhs1.study();
 
-const rekeningMhs = new BankAccount(mhs.name);
-rekeningMhs.deposit(200000);
-rekeningMhs.withdraw(50000);   
+const rekeningMhs = new BankAccount(mhs1.name);
+rekeningMhs.deposit(20000);
+rekeningMhs.withdraw(5000);
 
-document.getElementById("app").innerHTML = `
-<h2>Data Mahasiswa</h2>
-<p><strong>Nama:</strong> ${mhs.name}</p>
-<p><strong>Umur:</strong> ${mhs.age} Tahun</p>
-<p><strong>NIM:</strong> ${mhs.nim}</p>
-<p><strong>Jurusan:</strong> ${mhs.major}</p>
-<p><strong>Saldo Akhir:</strong> RP${rekeningMhs.getBalance ().toLocaleString('id-ID')}</p>
+document.getElementById("output").innerHTML = `
+    <h2>Data Mahasiswa</h2>
+    <p><strong>Nama:</strong> ${mhs1.name}</p>
+    <p><strong>Umur:</strong> ${mhs1.age}</p>
+    <p><strong>NIM:</strong> ${mhs1.nim}</p>
+    <p><strong>Jurusan:</strong> ${mhs1.major}</p>
+    <p><strong>Saldo Akhir:</strong> 
+    Rp${rekeningMhs.getBalance().toLocaleString('id-ID')}</p>
 `;
