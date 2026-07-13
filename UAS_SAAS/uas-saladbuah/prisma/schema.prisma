@@ -1,0 +1,41 @@
+datasource db {
+  provider = "postgresql"
+  // Tempel langsung link dari Neon di sini agar aman dari blokir prisma.config.ts
+  url      = "postgresql://neondb_owner:npg_V6GFd1cNmBqa@ep-fancy-meadow-aou39wg8-pooler.c-2.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+}
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id           Int        @id @default(autoincrement())
+  nama_lengkap String
+  email        String     @unique
+  password     String
+  created_at   DateTime   @default(now())
+  lapangans    Lapangan[]
+  bookings     Booking[]
+}
+
+model Lapangan {
+  id            Int       @id @default(autoincrement())
+  user_id       Int
+  nama          String
+  tipe          String
+  harga_per_jam Int
+  status        String    @default("Aktif")
+  user          User      @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
+
+model Booking {
+  id             Int      @id @default(autoincrement())
+  user_id        Int
+  customer       String
+  lapangan_nama  String
+  tanggal_manual DateTime
+  jam_mulai      String
+  durasi         Int
+  total_bayar    Int
+  created_at     DateTime @default(now())
+  user           User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
