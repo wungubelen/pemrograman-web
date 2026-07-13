@@ -1,41 +1,43 @@
-datasource db {
-  provider = "postgresql"
-  // Tempel langsung link dari Neon di sini agar aman dari blokir prisma.config.ts
-  url      = "postgresql://neondb_owner:npg_V6GFd1cNmBqa@ep-fancy-meadow-aou39wg8-pooler.c-2.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
-}
+// prisma/schema.prisma
+
 generator client {
   provider = "prisma-client-js"
 }
 
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
 model User {
-  id           Int        @id @default(autoincrement())
-  nama_lengkap String
-  email        String     @unique
-  password     String
-  created_at   DateTime   @default(now())
-  lapangans    Lapangan[]
-  bookings     Booking[]
+  id        String     @id @default(uuid())
+  email     String     @unique
+  password  String
+  nama      String
+  lapangan  Lapangan[] // Relasi: Satu user bisa punya banyak lapangan
+  createdAt DateTime   @default(now())
 }
 
 model Lapangan {
-  id            Int       @id @default(autoincrement())
-  user_id       Int
-  nama          String
-  tipe          String
-  harga_per_jam Int
-  status        String    @default("Aktif")
-  user          User      @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  id          String    @id @default(uuid())
+  nama        String
+  tipe        String    // Futsal, Badminton, dll
+  hargaPerJam Int
+  userId      String    // Foreign key ke User
+  owner       User      @relation(fields: [userId], references: [id])
+  bookings    Booking[] // Relasi: Satu lapangan bisa punya banyak booking
 }
 
 model Booking {
-  id             Int      @id @default(autoincrement())
-  user_id        Int
-  customer       String
-  lapangan_nama  String
-  tanggal_manual DateTime
-  jam_mulai      String
-  durasi         Int
-  total_bayar    Int
-  created_at     DateTime @default(now())
-  user           User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  id           String   @id @default(uuid())
+  customerNama String
+  tanggal      DateTime
+  jamMulai     Int      // Format 24 jam (misal: 15 untuk jam 3 sore)
+  durasi       Int
+  totalBayar   Int
+  lapanganId   String
+  lapangan     Lapangan @relation(fields: [lapanganId], references: [id])
+  createdAt    DateTime @default(now())
+
+  @@unique([lapanganId, tanggal, jamMulai]) // FITUR ANTI-BENTROK: Unik per lapangan/waktu
 }
